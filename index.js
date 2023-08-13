@@ -6,17 +6,15 @@ let listaContactos = [
     
 ];
 
-
 function añadirContacto(nombreCompleto){
     listaContactos.push(nombreCompleto)
 }
-
 añadirContacto("Alejandro Castro");
+
 
 function borrarContacto(quitar){
     listaContactos.splice(quitar, 1);
 }
-
 borrarContacto(4);
 
 
