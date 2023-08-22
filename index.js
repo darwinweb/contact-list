@@ -7,13 +7,9 @@ function añadirContacto(id, nombre, apellido, telefono, ciudad, direccion){
         nombre: nombre,
         apellidos: apellido,
         telefono: telefono,
-        ubicaciones:
-            {
-                ciudad: ciudad,
-                direccion: direccion
-            }
-        
-
+        ciudad: ciudad,
+        direccion: direccion
+            
     };
     listaContactos.push(nuevoContacto);
 }
@@ -21,8 +17,7 @@ añadirContacto(1,"Darwin","Gutierrez", 3012753041, "Cartagena","Conjunto Ipanem
 añadirContacto(2, "valentina", "gomez", 3024353625, "medellin","El poblado");
 añadirContacto(3, "tina", "comez", 3024353625, "medellin","El poblado");
 añadirContacto(4,"win","Guti", 3012365040, "huila","el lago");
-
-console.log(listaContactos)
+console.log(listaContactos);
 
 //funcion eliminar contacto del array
 
@@ -37,9 +32,21 @@ function eliminar(id){
 }
 
 eliminar();
-console.log(listaContactos)
 
 
+function actualizarContacto(id, nuevoTelefono, nuevaCiudad, nuevaDireccion){
+    for(let i = 0; i < listaContactos.length; i++){
+        if(listaContactos[i].id === id){
+            
+            listaContactos[i].telefono = nuevoTelefono;
+            listaContactos[i].ciudad = nuevaCiudad;
+            listaContactos[i].direccion = nuevaDireccion;
+            break;
+        }
+    }
+}
+actualizarContacto(4, "543625243", "Bogota", "usaquen");
+console.log(listaContactos);
 
 
 
